@@ -561,7 +561,42 @@ function deathswap:ui/inventory/item_type/list {\
     lore_zhtw:[{text:"當玩家受到傷害時顯示通知",color:gray,italic:false}],\
     components:"",\
 }
-function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.17"}
+#swap_time
+function deathswap:ui/inventory/item_type/list {\
+    id:"setting.swap_time",slot:"inventory.17",\
+    item_list:["clock","clock","clock","clock","clock","clock","clock","clock","clock","clock"],\
+    count_list:[1,1,1,1,1,1,1,1,1,1],\
+    toggle:"false",\
+    score_name:"*swap_time",score_objectives:"deathswap.setting",\
+    command:"function deathswap:setting/main/swap_time",\
+    name_list_en:[\
+        {text:"Swap Time: Random 30s~1min",color:yellow,italic:false},\
+        {text:"Swap Time: Random 30s~2min",color:yellow,italic:false},\
+        {text:"Swap Time: Random 30s~3min",color:yellow,italic:false},\
+        {text:"Swap Time: Random 30s~4min",color:yellow,italic:false},\
+        {text:"Swap Time: Random 30s~5min",color:yellow,italic:false},\
+        {text:"Swap Time: Fixed 1min",color:yellow,italic:false},\
+        {text:"Swap Time: Fixed 2min",color:yellow,italic:false},\
+        {text:"Swap Time: Fixed 3min",color:yellow,italic:false},\
+        {text:"Swap Time: Fixed 4min",color:yellow,italic:false},\
+        {text:"Swap Time: Fixed 5min",color:yellow,italic:false},\
+    ],\
+    name_list_zhtw:[\
+        {text:"交換時間：隨機30秒~1分鐘",color:yellow,italic:false},\
+        {text:"交換時間：隨機30秒~2分鐘",color:yellow,italic:false},\
+        {text:"交換時間：隨機30秒~3分鐘",color:yellow,italic:false},\
+        {text:"交換時間：隨機30秒~4分鐘",color:yellow,italic:false},\
+        {text:"交換時間：隨機30秒~5分鐘",color:yellow,italic:false},\
+        {text:"交換時間：固定1分鐘",color:yellow,italic:false},\
+        {text:"交換時間：固定2分鐘",color:yellow,italic:false},\
+        {text:"交換時間：固定3分鐘",color:yellow,italic:false},\
+        {text:"交換時間：固定4分鐘",color:yellow,italic:false},\
+        {text:"交換時間：固定5分鐘",color:yellow,italic:false},\
+    ],\
+    lore_en:[{text:"Amount of time between each swap",color:gray,italic:false}],\
+    lore_zhtw:[{text:"每次交換之間的時間",color:gray,italic:false}],\
+    components:"",\
+}
 
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.18"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.19"}

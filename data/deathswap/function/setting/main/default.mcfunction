@@ -9,6 +9,7 @@ scoreboard players set *difficulty deathswap.setting 2
 scoreboard players set *spawn_monsters deathswap.setting 1
 scoreboard players set *max_deaths deathswap.setting 5
 scoreboard players set *damage_alert deathswap.setting 1
+scoreboard players set *swap_time deathswap.setting 2
 
 scoreboard players set *time_set deathswap.setting 0
 scoreboard players set *time_cycle deathswap.setting 1
