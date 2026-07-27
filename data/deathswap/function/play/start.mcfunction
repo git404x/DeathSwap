@@ -44,6 +44,7 @@ scoreboard players operation *player_count_update deathswap.status = *player_cou
 
 #status
 scoreboard players set *game deathswap.status 2
+execute unless score *damage_alert deathswap.setting matches 0..1 run scoreboard players set *damage_alert deathswap.setting 1
 
 #play_count
 scoreboard players add *play_count deathswap.status 1

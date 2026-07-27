@@ -526,7 +526,26 @@ function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.7"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.13"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.14"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.15"}
-function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.16"}
+#damage_alert
+function deathswap:ui/inventory/item_type/list {\
+    id:"setting.damage_alert",slot:"inventory.16",\
+    item_list:["bell","bell"],\
+    count_list:[1,1],\
+    toggle:"true",\
+    score_name:"*damage_alert",score_objectives:"deathswap.setting",\
+    command:"function deathswap:setting/main/damage_alert",\
+    name_list_en:[\
+        {text:"Damage Alerts: Disabled",color:red,italic:false},\
+        {text:"Damage Alerts: Enabled",color:green,italic:false},\
+    ],\
+    name_list_zhtw:[\
+        {text:"傷害通知：關閉",color:red,italic:false},\
+        {text:"傷害通知：開啟",color:green,italic:false},\
+    ],\
+    lore_en:[{text:"Show toast messages when players take damage",color:gray,italic:false}],\
+    lore_zhtw:[{text:"當玩家受到傷害時顯示通知",color:gray,italic:false}],\
+    components:"",\
+}
 function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.17"}
 
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.18"}

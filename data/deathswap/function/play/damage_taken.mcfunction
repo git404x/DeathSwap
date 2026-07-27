@@ -12,7 +12,7 @@ scoreboard players operation *temp.integer deathswap.damage_taken /= #operation.
 scoreboard players operation *temp.decimals deathswap.damage_taken %= #operation.10 deathswap.status
 
 #text
-execute if score *language deathswap.setting matches 1 run title @a actionbar [\
+execute if score *damage_alert deathswap.setting matches 1 if score *language deathswap.setting matches 1 run title @a actionbar [\
     {selector:"@s"},{text:" is taking "},\
     [\
         {score:{name:"*temp.integer",objective:"deathswap.damage_taken"},color:"light_purple"},".",\
@@ -20,7 +20,7 @@ execute if score *language deathswap.setting matches 1 run title @a actionbar [\
     ],\
     {text:" damage!"}\
 ]
-execute if score *language deathswap.setting matches 2 run title @a actionbar [\
+execute if score *damage_alert deathswap.setting matches 1 if score *language deathswap.setting matches 2 run title @a actionbar [\
     {selector:"@s"},{text:" 正在受到 "},\
     [\
         {score:{name:"*temp.integer",objective:"deathswap.damage_taken"},color:"light_purple"},".",\
