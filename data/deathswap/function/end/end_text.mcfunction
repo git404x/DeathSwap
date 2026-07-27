@@ -49,12 +49,3 @@ execute if entity @a[tag=killer] if score *language deathswap.setting matches 2 
 ]
 
 #reset
-execute if score *language deathswap.setting matches 1 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"The game will be reset at a later date!",color:"gray"}\
-]
-execute if score *language deathswap.setting matches 2 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"遊戲將在稍後重製！",color:"gray"}\
-]
-

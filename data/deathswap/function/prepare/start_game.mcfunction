@@ -22,7 +22,6 @@ scoreboard objectives setdisplay below_name deathswap.health
 scoreboard objectives setdisplay sidebar deathswap.display.loading
 
 #text
-tellraw @a "-----------------------------------------------------"
 execute if score *language deathswap.setting matches 1 run tellraw @a [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
     {text:"The Game is loading..."}\

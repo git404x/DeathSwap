@@ -69,24 +69,21 @@ execute if score *language deathswap.setting matches 2 run title @a title {text:
 execute if score *language deathswap.setting matches 1 run title @a subtitle {text:"Game Started!",color:"green"}
 execute if score *language deathswap.setting matches 2 run title @a subtitle {text:"遊戲開始！",color:"green"}
 
-#text
-tellraw @a "-----------------------------------------------------"
-
 #text - start for notadmin
 execute if score *language deathswap.setting matches 1 run tellraw @a[tag=notadmin] [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"Game Started!"}\
+    {text:"Game Started!","color":"green"}\
 ]
 execute if score *language deathswap.setting matches 2 run tellraw @a[tag=notadmin] [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"遊戲開始！"}\
+    {text:"遊戲開始！","color":"green"}\
 ]
 #text - start + reset for admin
 execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin] [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"Game Started!"},\
+    {text:"Game Started!","color":"green"},\
     {\
-        text: " [Reset Game]",color: "aqua",\
+        text: " [Reset Game]",color: "gray",\
         click_event: {\
             action: "run_command",command: "/trigger reset" \
         },\
@@ -97,13 +94,13 @@ execute if score *language deathswap.setting matches 1 run tellraw @a[tag=admin]
                 {text:"/function deathswap:reset",color:light_purple},{text:" [OP]",color:red}\
             ]\
         }\
-    },\
+    }\
 ]
 execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin] [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"遊戲開始！"},\
+    {text:"遊戲開始！","color":"green"},\
     {\
-        text: " [重製遊戲]",color: "aqua",\
+        text: " [重設遊戲]",color: "gray",\
         click_event: {\
             action: "run_command",command: "/trigger reset" \
         },\
@@ -113,31 +110,6 @@ execute if score *language deathswap.setting matches 2 run tellraw @a[tag=admin]
                 {text:"/trigger reset",color:light_purple},{text:" [管理員]",color:green},"\n",\
                 {text:"/function deathswap:reset",color:light_purple},{text:" [OP]",color:red}\
             ]\
-        }\
-    },\
-]
-#text - /teammsg
-execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 1 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {\
-        text: "Please use /teammsg to send messages in the team chat",\
-        click_event: {\
-            action: "suggest_command",command: "/teammsg " \
-        },\
-        hover_event: {\
-            action: "show_text",value: "/teammsg <message>" \
-        }\
-    }\
-]
-execute if score *mode deathswap.setting matches 1 if score *language deathswap.setting matches 2 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {\
-        text: "請使用 /teammsg 在隊伍聊天室傳訊息",\
-        click_event: {\
-            action: "suggest_command","command": "/teammsg " \
-        },\
-        hover_event: {\
-            action: "show_text","value": "/teammsg <訊息>" \
         }\
     }\
 ]

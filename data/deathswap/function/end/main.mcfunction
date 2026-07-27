@@ -70,8 +70,6 @@ execute unless data storage deathswap:temp {end:"all_fail"} unless data storage 
 
 #---
 #text
-tellraw @a "-----------------------------------------------------"
-
 #all fail
 execute if data storage deathswap:temp {end:"all_fail"} if score *language deathswap.setting matches 1 run tellraw @a [\
     {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
@@ -163,9 +161,7 @@ execute if score *language deathswap.setting matches 2 as @a[tag=win,tag=player,
 execute if score *language deathswap.setting matches 2 as @a[tag=win,tag=player,tag=!killer] run tellraw @a [{storage:"deathswap:ui",nbt:"text.prefix",interpret:true},{"selector":"@s"},{"text":" +2"}]
 execute if score *language deathswap.setting matches 2 as @a[tag=win,tag=!player] run tellraw @a [{storage:"deathswap:ui",nbt:"text.prefix",interpret:true},{"selector":"@s"},{"text":" +1"}]
 
-tellraw @a "-----------------------------------------------------"
 
-#---
 #particle
 execute as @a[tag=win] at @s run particle end_rod ~ ~1 ~ 0 0 0 0.25 40 force
 execute as @a[tag=win] at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~
