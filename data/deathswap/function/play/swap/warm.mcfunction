@@ -6,17 +6,7 @@
 #--------------------------------------------------
 
 #tellraw
-execute if score *swap_countdown deathswap.timer = *swap_warn deathswap.setting if score *language deathswap.setting matches 1 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"Swap in "},\
-    [{score:{name:"*swap_countdown",objective:"deathswap.timer"}},"s"],\
-    {text:"!"}\
-]
-execute if score *swap_countdown deathswap.timer = *swap_warn deathswap.setting if score *language deathswap.setting matches 2 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    [{score:{name:"*swap_countdown",objective:"deathswap.timer"}},"秒"],\
-    {text:"後交換！"}\
-]
+# removed for cleaner UI
 
 #subtitle
 execute if score *swap_countdown deathswap.timer <= *swap_warn deathswap.setting run title @a title ""

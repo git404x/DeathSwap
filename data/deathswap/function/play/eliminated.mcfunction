@@ -35,24 +35,10 @@ execute if score *language deathswap.setting matches 1 run title @a subtitle [""
 execute if score *language deathswap.setting matches 2 run title @a subtitle ["",{text:"❌ ",color:"red"},{selector:"@s"},{text: " 淘汰！ ",color:"red"}]
 
 #text - Eliminated
-execute if score *language deathswap.setting matches 1 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"❌ ",color:"red"},{selector:"@s"},{text:" Eliminated!"}\
-]
-execute if score *language deathswap.setting matches 2 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"❌ ",color:"red"},{selector:"@s"},{text:" 淘汰！"}\
-]
+#removed
 
 #text - killer died
-execute if entity @s[tag=killer] if score *killer.eliminated_alert deathswap.setting matches 1 if score *language deathswap.setting matches 1 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"The killer named "},{selector:"@s",color:"dark_red"},{text:" has been eliminated!"}\
-]
-execute if entity @s[tag=killer] if score *killer.eliminated_alert deathswap.setting matches 1 if score *language deathswap.setting matches 2 run tellraw @a [\
-    {storage:"deathswap:ui",nbt:"text.prefix",interpret:true},\
-    {text:"一位殺手名為 "},{selector:"@s",color:"dark_red"},{text:" 已被淘汰！"}\
-]
+#removed
 
 #sound
 execute as @a at @s run playsound entity.wither.break_block master @s ~ ~ ~
