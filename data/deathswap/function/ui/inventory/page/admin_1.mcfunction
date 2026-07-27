@@ -516,7 +516,22 @@ function deathswap:ui/inventory/item_type/list {\
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.4"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.5"}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.6"}
-function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.7"}
+#max_deaths
+function deathswap:ui/inventory/item_type/score {\
+    id:"setting.max_deaths",slot:"inventory.7",\
+    item:"skeleton_skull",count_use_score:"true",\
+    toggle:"false",\
+    score_name:"*max_deaths",score_objectives:"deathswap.setting",\
+    command:"function deathswap:setting/main/max_deaths",\
+    unit_en:" deaths",unit_zhtw:" 次死亡",\
+    name_disabled_en:{},\
+    name_disabled_zhtw:{},\
+    name_en:[{text:"Max Deaths : ",color:yellow,italic:false}],\
+    name_zhtw:[{text:"最大死亡次數：",color:yellow,italic:false}],\
+    lore_en:[{text:"Number of deaths allowed before elimination",color:gray,italic:false}],\
+    lore_zhtw:[{text:"淘汰前允許的死亡次數",color:gray,italic:false}],\
+    components:"",\
+}
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.8"}
 
 #function deathswap:ui/inventory/item_type/placeholder {slot:"inventory.9"}

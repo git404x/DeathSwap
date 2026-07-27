@@ -74,7 +74,7 @@ execute unless score *arena deathswap.status matches 1 if score *gmchange deaths
 
 #---
 #died
-execute as @a[tag=player,scores={deathswap.death=1}] run function deathswap:play/eliminated
+execute as @a[tag=player] if score @s deathswap.death >= *max_deaths deathswap.setting run function deathswap:play/eliminated
 
 #wiped out
 execute if score *team_red deathswap.status matches 1 if score *red_count deathswap.status matches 0 run function deathswap:play/wiped_out/team_red
