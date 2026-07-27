@@ -25,14 +25,15 @@ scoreboard players display name *swap_count deathswap.display.play_status ["",\
 
 #---
 #round_time
-scoreboard players set *round_time deathswap.display.play_status -2
+execute if score *swap_time deathswap.setting matches 0..4 run scoreboard players set *round_time deathswap.display.play_status -2
+execute if score *swap_time deathswap.setting matches 5..9 run scoreboard players reset *round_time deathswap.display.play_status
 
-execute if score *language deathswap.setting matches 1 run \
+execute if score *swap_time deathswap.setting matches 0..4 if score *language deathswap.setting matches 1 run \
 scoreboard players display name *round_time deathswap.display.play_status ["",\
     {text:"Round Time: "},\
     {storage:"deathswap:ui",nbt:"time.round_time.display",interpret:true,color:"green"}\
 ]
-execute if score *language deathswap.setting matches 2 run \
+execute if score *swap_time deathswap.setting matches 0..4 if score *language deathswap.setting matches 2 run \
 scoreboard players display name *round_time deathswap.display.play_status ["",\
     {text:"回合時間："},\
     {storage:"deathswap:ui",nbt:"time.round_time.display",interpret:true,color:"green"}\

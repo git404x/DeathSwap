@@ -52,7 +52,7 @@ execute as @e[tag=lobby_text] at @s unless entity @e[tag=lobby,distance=..0.5] r
 function deathswap:ui/particle_circle
 
 #death
-scoreboard players reset @a deathswap.death
+execute unless score *game deathswap.status matches 2 run scoreboard players reset @a deathswap.death
 
 #win score
 execute as @a unless score @s deathswap.win_score matches 1.. run scoreboard players set @s deathswap.win_score 0

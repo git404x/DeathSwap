@@ -27,7 +27,7 @@ scoreboard players set *max_health deathswap.setting 20
 
 scoreboard players set *swap_bossbar deathswap.setting 0
 scoreboard players set *swap_invincible deathswap.setting 0
-scoreboard players set *swap_warn deathswap.setting 0
+scoreboard players set *swap_warn deathswap.setting 5
 
 scoreboard players set *team_collisionrule deathswap.setting 1
 scoreboard players set *team_friendlyfire deathswap.setting 1
