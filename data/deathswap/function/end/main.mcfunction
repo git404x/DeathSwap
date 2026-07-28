@@ -165,9 +165,7 @@ execute if score *language deathswap.setting matches 2 as @a[tag=win,tag=!player
 #particle
 execute as @a[tag=win] at @s run particle end_rod ~ ~1 ~ 0 0 0 0.25 40 force
 execute as @a[tag=win] at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~
-
-#sound
-execute as @a[tag=!win,team=!spectator] at @s run playsound entity.wither.death master @s ~ ~ ~
+execute as @a[tag=win] at @s run summon firework_rocket ~ ~1 ~ {LifeTime:20,FireworksItem:{id:"minecraft:firework_rocket",components:{"minecraft:fireworks":{explosions:[{shape:"small_ball",colors:[I;16711680,65280,255],has_trail:1b}]}}}}
 
 #adv
 advancement grant @a[tag=!win,team=!spectator] only deathswap:main/criteria/lose
